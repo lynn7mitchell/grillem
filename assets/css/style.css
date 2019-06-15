@@ -2,6 +2,14 @@ body{
     color: #fff;
 }
 
+li {
+    padding-bottom: 20px;
+    background-color: #fff;
+}
+.center-text{
+    text-align:center;
+}
+
 .background {
     background: url("../images/background.png");
     height: 100vh;
