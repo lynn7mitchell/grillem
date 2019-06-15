@@ -76,7 +76,6 @@ logout.addEventListener('click', (e) => { //listens for when the user clicks log
 const loginForm = document.querySelector("#login-form"); //reference to id=login-form in index.html
 loginForm.addEventListener('submit', (e) => { //listens for when the user clicks login.. (e) is the event object.. => is arrow function
     e.preventDefault(); //stops page from refreshing when submitting
-
     //get user info
     const email = loginForm['login-email'].value; //square bracket notation (grabs value from id="login-email" in html)
     const password = loginForm['login-password'].value; //square bracket notation (grabs value from id="login-password" in html)

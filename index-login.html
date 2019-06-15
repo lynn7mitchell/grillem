@@ -6,37 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--My CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
     <title>Grill'em Login</title>
 </head>
 
 <body class="grey lighten-2">
 
-    <!-- NAVBAR -->
-    <nav class="z-depth-0 grey lighten-4"> <!--Materialize styling-->
-        <div class="nav-wrapper container"> <!--Materialize styling-->
-            <a href="#" class="brand-logo"> <!--class of brand-logo given to anchor for image-->
-                <img src="img/logo.svg" style="width: 180px; margin-top: 10px;"> <!--grab and display image in navbar-->
-            </a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down"> <!--Materialize styling-->
-                <li class="logged-in" style="display: none;"> <!--Class of logged-in so we can display only when logged in. display:none so it does not display when page is refreshed-->
-                    <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a> <!--Puts "Account" in navbar. When clicked, "modal-account" will pop up (scroll down in html to find modal-account)-->
-                </li>
-                <li class="logged-in" style="display: none;"> <!--Class of logged-in so we can display only when logged in. display:none so it does not display when page is refreshed-->
-                    <a href="#" class="grey-text" id="logout">Logout</a> <!--Puts "Logout" in navbar. When clicked, "modal-logout" will pop up (scroll down in html to find modal-logout)-->
-                </li>
-                <li class="logged-in" style="display: none;"> <!--Class of logged-in so we can display only when logged in. display:none so it does not display when page is refreshed-->
-                    <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Guide</a> <!--Puts "Create Guide" in navbar. When clicked, "modal-create" will pop up (scroll down in html to find modal-create)-->
-                </li>
-                <li class="logged-out" style="display: none;"> <!--Class of logged-out so we can display only when logged out. display:none so it does not display when page is refreshed-->
-                    <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a> <!--Puts "Login" in navbar. When clicked, "modal-login" will pop up (scroll down in html to find modal-login)-->
-                </li>
-                <li class="logged-out" style="display: none;"> <!--Class of logged-out so we can display only when logged out. display:none so it does not display when page is refreshed-->
-                    <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a> <!--Puts "Sign up" in navbar. When clicked, "modal-signup" will pop up (scroll down in html to find modal-signup)-->
-                </li>
-            </ul>
-        </div>
-    </nav>
+    
 
     <!-- SIGN UP MODAL -->
     <div id="modal-signup" class="modal"> <!-- because id="modal-signup," this modal pops up when data-target="modal-signup" (signup button) is clicked -->
@@ -62,12 +48,15 @@
     </div>
 
     <!-- LOGIN MODAL -->
-    <div id="modal-login" class="modal"> <!-- because id="modal-login," this modal pops up when data-target="modal-login" (login button) is clicked -->
-        <div class="modal-content"> <!--content of the modal-->
-            <h4>Login</h4><br /> <!--Shows up at the top of the modal, like a heading-->
-            <form id="login-form">
+     <!-- because id="modal-login," this modal pops up when data-target="modal-login" (login button) is clicked -->
+    <!-- <div id="modal-login" class="modal"> -->
+         <!--content of the modal-->
+        <!-- <div class="modal-content"> -->
+            <!--Shows up at the top of the modal, like a heading-->
+            <!-- <h4>Login</h4><br />
+            <form id="login-form"> -->
                 <!--Input fields for sign up modal-->
-                <div class="input-field">
+                <!-- <div class="input-field">
                     <input type="email" id="login-email" required />
                     <label for="login-email">Email address</label>
                 </div>
@@ -78,7 +67,7 @@
                 <button class="btn yellow darken-2 z-depth-0">Login</button>
             </form>
         </div>
-    </div>
+    </div> -->
 
     <!-- ACCOUNT MODAL -->
     <div id="modal-account" class="modal"> <!-- because id="modal-account," this modal pops up when data-target="modal-account" (Account button) is clicked -->
@@ -109,14 +98,28 @@
 
     <!-- GUIDE LIST -->
     <!-- this is just where we dump all existing and user-added guides-->
-    <div class="container" style="margin-top: 40px;">
-        <ul class="collapsible z-depth-0 guides" style="border: none;">
-
-        </ul>
-    </div>
+    
 
 
-
+    <div class="background">
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons white-text medium">menu</i></a>
+            
+            <div class="container">
+                <h4>Login</h4><br /> <!--Shows up at the top of the modal, like a heading-->
+                <form id="login-form">
+                    <!--Input fields for sign up modal-->
+                    <div class="input-field">
+                        <input type="email" id="login-email" required />
+                        <label for="login-email"><span class="white-text">Email</span></label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="login-password" required />
+                        <label for="login-password"><span class="white-text">Password</span></label>
+                    </div>
+                    <button class="btn z-depth-3" id="green-submit-button" style="width:100%;">Log me in!</button>
+                </form>
+            </div>
+        </div>
 
 
 
@@ -124,6 +127,7 @@
     <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+
 
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
