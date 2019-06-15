@@ -1,1 +1,4 @@
-// test for github -_-
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+
