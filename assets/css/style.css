@@ -1,3 +1,38 @@
+/* body{
+    color: #fff;
+}
+
+li {
+    padding-bottom: 20px;
+    background-color: #fff;
+}
+.center-text{
+    text-align:center;
+}
+
+.background {
+    background: url("../images/background.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.icon-container img {
+    height: 10em;
+}
+
+@media only screen and (max-width: 600px) {
+    .icon-container img{
+        height: 8em;
+    }
+  } */
+
+
+
+img {
+    width:100%;
+}
+
 body{
     color: #fff;
 }
@@ -27,14 +62,15 @@ slide-out {
 .icon-container img {
     height: 10em;
 }
+
 .navbar-img{
-    width: 3em;
-    height: 3em;
+    width: 2em;
+    height: 2em;
 }
+
+    
 
 @media only screen and (max-width: 600px) {
     .icon-container img{
         height: 8em;
-    }
-  }
-
+    }}
