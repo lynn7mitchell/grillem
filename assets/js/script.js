@@ -57,3 +57,4 @@ function callback(results, status) {
     console.log(nearbyStore)
   }
 }
+
