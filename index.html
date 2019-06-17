@@ -17,6 +17,8 @@
 
 <body>
     <div class="background">
+        <!-- dummy map tag for places api to work -->
+        <div id="map"></div>
         <ul id="slide-out" class="sidenav">
             <li>
                 <div class="user-view">
@@ -36,8 +38,10 @@
             <li><a class="subheader">Subheader</a></li>
             <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
         </ul>
-        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons white-text medium">menu</i></a>
-        <div class="icon-container contaner">
+        <div id="nearby-store"></div>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i
+                class="material-icons white-text medium">menu</i></a>
+        <div class="icon-container contianer">
             <div class="row">
                 <div class="recipes col s6 center-align">
                     <img src="assets/images/recipe-icon-white.png" alt="Recipes">
@@ -56,6 +60,8 @@
             </div>
         </div>
     </div>
+    <!-- Google API for geolocation and places -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZY-pV5hfMZCPTRn4V-2Vne3AI3CIyqL4&libraries=places"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- My JS -->
