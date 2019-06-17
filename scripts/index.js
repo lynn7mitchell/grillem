@@ -50,7 +50,7 @@ const setupGuides = (data) => { //this function is called in auth.js
     }
     //if there is no length to the data, the user is not logged in and we display this message
     else {
-        guideList.innerHTML = '<h5 class = "center-align"> Login to view guides</h5>'
+        guideList.innerHTML = '<h5 class = "center-align white-text"> Login to view guides</h5>'
     }
 }
 
