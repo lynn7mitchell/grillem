@@ -38,6 +38,7 @@ const setupGuides = (data) => { //this function is called in auth.js
             const guide = doc.data(); //grabs the data from each item
             //the backtick allows us to dynamically output data into curly braces
 
+
             //below we start at content[1] because content[0] is the title
             const li = `
             <li>
@@ -45,6 +46,7 @@ const setupGuides = (data) => { //this function is called in auth.js
                     <div class = "collapsible-body white"><h3>What you'll need</h3><br>${guide.content[1]}</div>
                     <div class = "collapsible-body white"><h3>Steps/Prep</h3><br>${guide.content[2]}</div>
                     <div class = "collapsible-body white"><h3>Cooking</h3><br>${guide.content[3]}</div>
+
             </li>
         `;
             html += li //the html is itself plus the next thing added
