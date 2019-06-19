@@ -2,16 +2,127 @@ body{
     color: #fff;
 }
 
+li {
+    padding-bottom: 20px;
+    background-color: #fff;
+}
+.center-text{
+    text-align:center;
+}
+
+slide-out {
+    background-color: #fff;
+}
 .background {
-    background: url("../images/background.png");
     height: 100vh;
+    background: url("../images/background.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
+.background-navbar{
+    background: white;
 
-.icon-container img {
+}
+
+.recipes {
+    margin-top: 4em;
+}
+
+#recipes-header {
+    height: 13em;
+    display: block;
+    margin: 0 auto;
+    padding-right: 25px;
+    padding-top: 3em;
+}
+
+.cuts {
+    margin-top: 4em;
+}
+
+.filtered-icon{ 
+    height:65px;
+
+}
+.filtered-icon-cleaning{
+    height:80px;
+    margin-top:4m;
+
+}
+
+#cuts-header {
+    height: 13em;
+    display: block;
+    margin: 0 auto;
+    padding-right: 25px;
+    padding-top: 3em;
+}
+
+.cleaning {
+    margin-top: 4em;
+}
+
+#cleaning-header {
+    height: 13em;
+    display: block;
+    margin: 0 auto;
+    padding-right: 25px;
+    padding-top: 3em;
+}
+
+.favorites {
+    margin-top: 4em;
+}
+
+#favorites-header {
+    height: 13em;
+    display: block;
+    margin: 0 auto;
+    padding-right: 25px;
+    padding-top: 3em;
+}
+
+.home {
+    margin-top: 4em;
+    color: #fff;
+}
+
+#home-header {
+    height: 13em;
+    display: block;
+    margin: 0 auto;
+    padding-right: 25px;
+    padding-top: 3em;
+    color: #fff;
+}
+.modal{
+    color:black;
+}
+
+#Featured{
+text-align: left;
+
+}
+
+h3 {
+    text-align: left;
+
+}
+h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 3em;
+}
+
+.icon-container img{
+    text-align: center;
     height: 10em;
 }
+.navbar-img{
+    width: 3em;
+    height: 3em;
+}
+
 
 #toast-container {
     min-width: 10%;

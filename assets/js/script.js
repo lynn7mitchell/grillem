@@ -1,6 +1,7 @@
 // MATERIALIZE FEATURES
 $(document).ready(function () {
   $('.sidenav').sidenav();
+  $('#modal1').modal();
 });
 
 // GET LOCATION

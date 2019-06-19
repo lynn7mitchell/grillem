@@ -49,6 +49,7 @@ createForm.addEventListener('submit', (e) => {  //listens for when the user clic
         $("#cooking").val("");
 
 
+
     //if someone tries to write to database while not logged in, catches error and console logs what the error is
     }).catch(err => {
         console.log(err.message);
