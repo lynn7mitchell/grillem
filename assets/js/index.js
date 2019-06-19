@@ -51,6 +51,7 @@ const setupGuides = (data) => { //this function is called in auth.js
         });
 
         guideList.innerHTML = html; //changes the html of guideList variable (see top of page) to the list we just iterated through
+        
     }
     //if there is no length to the data, the user is not logged in and we display this message
     else {
