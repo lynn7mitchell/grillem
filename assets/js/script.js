@@ -1,7 +1,7 @@
 // MATERIALIZE FEATURES
 $(document).ready(function () {
   $('.sidenav').sidenav();
-  $('#modal1').modal();
+  $('#modal-under-construction').modal();
 });
 
 // GET LOCATION
@@ -53,7 +53,7 @@ function callback(results, status) {
       // createMarker(results[i]);
     }
     nearbyStore = results[0].name;
-    $("#nearby-store").text(nearbyStore);
+    $("#nearby-store").text("Supermarket Near You: " + nearbyStore);
     console.log(results)
     console.log(nearbyStore)
   }
