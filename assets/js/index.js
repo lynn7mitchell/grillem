@@ -76,3 +76,6 @@ document.addEventListener('DOMContentLoaded', function () { //"When the content 
     M.Collapsible.init(items);//M = materialize library, Collapsible is a method in that library, we are initializing it, and passing in our new variable
 
 });
+
+
+//random comment

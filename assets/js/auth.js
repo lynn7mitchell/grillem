@@ -108,3 +108,6 @@ loginForm.addEventListener('submit', (e) => { //listens for when the user clicks
         loginForm.reset();  //clears out the form fields
     })
 })
+
+
+//random comment
