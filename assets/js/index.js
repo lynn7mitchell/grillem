@@ -1,4 +1,5 @@
 const guideList = document.querySelector('.guides');
+const submitRecipe = document.querySelector('.submit-recipe');
 const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
 const accountDetails = document.querySelector('.account-details');
@@ -10,7 +11,7 @@ const setupUI = (user) => { //takes in user as a parameter
             //the backtick allows us to dynamically output data into curly braces
             const html = `
             <div>Logged in as ${user.email}</div>
-            <div>${doc.data().bio}</div>
+            <div>Welcome, ${doc.data().bio}!</div>
         `;
         accountDetails.innerHTML = html; //appents to accountDetails (.account-details)
         })
@@ -53,11 +54,15 @@ const setupGuides = (data) => { //this function is called in auth.js
         });
 
         guideList.innerHTML = html; //changes the html of guideList variable (see top of page) to the list we just iterated through
+
+        // submitRecipe.innerHTML = '<h5 class = "center-align white-text">Add your own recipe!</h5>';
+
         
     }
     //if there is no length to the data, the user is not logged in and we display this message
     else {
-        guideList.innerHTML = '<h5 class = "center-align white-text"> Login to view guides</h5>'
+        guideList.innerHTML = '<h5 class = "center-align black-text"> Login to view guides</h5>';
+        // submitRecipe.innerHTML = '<h5 class = "center-align white-text"> Login to submit a recipe</h5>';
     }
 }
 
