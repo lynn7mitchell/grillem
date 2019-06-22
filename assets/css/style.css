@@ -135,6 +135,15 @@ h2 {
     width: 3em;
 }
 
+
+#toast-container {
+    min-width: 10%;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%) translateY(50%);
+}
+
+
 @media only screen and (max-width: 600px) {
     .icon-container img{
         height: 7em;
