@@ -22,14 +22,34 @@ const createForm = document.querySelector('#create-form'); //reference to id=cre
 createForm.addEventListener('submit', (e) => {  //listens for when the user clicks submit or hits enter.. (e) is the event object.. => is arrow function
     e.preventDefault(); //stops page from refreshing when submitting
 
-    db.collection('guides').add({ //go into guides collection in firestore and add the following to the database...
-        title: createForm['title'].value, //square bracket notation (grabs value from id="title" in html)
-        content: createForm['content'].value //square bracket notation (grabs value from id="content" in html)
+    var recipeTitle = $("#title").val().trim();
+    var recipeNeed = $("#what-youll-need").val().trim();
+    var recipeSteps = $("#steps").val().trim();
+    var recipeCooking = $("#cooking").val().trim();
+    var recipeEverything = [recipeTitle, recipeNeed, recipeSteps, recipeCooking];
+
+    console.log("recipeTitle: " + recipeTitle);
+    console.log("recipeNeed: " + recipeNeed);
+    console.log("recipeSteps: " + recipeSteps);
+    console.log("recipeCooking: " + recipeCooking);
+    console.log("recipeEverything: " + recipeEverything);
+    
+
+    db.collection('guides').add({ //go into recipes collection in firestore and add the following to the database...
+        title: recipeTitle, //square bracket notation (grabs value from id="title" in html)
+        content: recipeEverything //square bracket notation (grabs value from id="content" in html)
     }).then(() => {
         //close modal and reset form
-        const modal = document.querySelector("#modal-create"); //reference to id=modal-create in index.html
-        M.Modal.getInstance(modal).close();  //M = materialize library, Modal is a method in that library, we get the instance, then close it
-        createForm.reset();  //clears out the form fields
+        //const modal = document.querySelector("#modal-create"); //reference to id=modal-create in index.html
+        //M.Modal.getInstance(modal).close();  //M = materialize library, Modal is a method in that library, we get the instance, then close it
+        //createForm.reset();  //clears out the form fields
+        $("#title").val("");
+        $("#what-youll-need").val("");
+        $("#steps").val("");
+        $("#cooking").val("");
+
+
+
     //if someone tries to write to database while not logged in, catches error and console logs what the error is
     }).catch(err => {
         console.log(err.message);

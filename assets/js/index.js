@@ -1,4 +1,5 @@
 const guideList = document.querySelector('.guides');
+const submitRecipe = document.querySelector('.submit-recipe');
 const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
 const accountDetails = document.querySelector('.account-details');
@@ -10,7 +11,7 @@ const setupUI = (user) => { //takes in user as a parameter
             //the backtick allows us to dynamically output data into curly braces
             const html = `
             <div>Logged in as ${user.email}</div>
-            <div>${doc.data().bio}</div>
+            <div>Welcome, ${doc.data().bio}!</div>
         `;
         accountDetails.innerHTML = html; //appents to accountDetails (.account-details)
         })
@@ -37,20 +38,29 @@ const setupGuides = (data) => { //this function is called in auth.js
         data.forEach(doc => { //will iterate through the array and fire a function for each element inside the array
             const guide = doc.data(); //grabs the data from each item
             //the backtick allows us to dynamically output data into curly braces
+
+
+            //below we start at content[1] because content[0] is the title
             const li = `
             <li>
-                <div class = "collapsible-header grey lighten-4">${guide.title}</div>
-                <div class = "collapsible-body white">${guide.content}</div>
+                    <div class = "collapsible-header grey lighten-4"><h1>${guide.title}</h1></div>
+                    <div class = "collapsible-body white"><h3>What you'll need</h3><br>${guide.content[1]}</div>
+                    <div class = "collapsible-body white"><h3>Steps/Prep</h3><br>${guide.content[2]}</div>
+                    <div class = "collapsible-body white"><h3>Cooking</h3><br>${guide.content[3]}</div>
+
             </li>
         `;
             html += li //the html is itself plus the next thing added
         });
 
         guideList.innerHTML = html; //changes the html of guideList variable (see top of page) to the list we just iterated through
+        // submitRecipe.innerHTML = '<h5 class = "center-align white-text">Add your own recipe!</h5>';
+        
     }
     //if there is no length to the data, the user is not logged in and we display this message
     else {
-        guideList.innerHTML = '<h5 class = "center-align white-text"> Login to view guides</h5>'
+        guideList.innerHTML = '<h5 class = "center-align black-text"> Login to view guides</h5>';
+        // submitRecipe.innerHTML = '<h5 class = "center-align white-text"> Login to submit a recipe</h5>';
     }
 }
 
