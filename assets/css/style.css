@@ -1,7 +1,12 @@
 body{
     color: #fff;
 }
-
+a{
+    color: #fff !important;
+}
+h3{
+    text-align: center;
+}
 li {
     padding-bottom: 20px;
     background-color: #fff;
@@ -9,12 +14,14 @@ li {
 .center-text{
     text-align:center;
 }
-
+.modal-footer a{
+    color: #000;
+}
 slide-out {
     background-color: #fff;
 }
 .background {
-    height: 100vh;
+    height: 100%;
     background: url("../images/background.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,7 +30,16 @@ slide-out {
     background: white;
 
 }
-
+.sidenav .center-text{
+    color: #000;
+}
+#nearby-store{
+    position: absolute;
+    right: 1em;
+    top: .5em;
+    text-align: right;
+    font-size: 1em;
+}
 .recipes {
     margin-top: 4em;
 }
@@ -46,7 +62,7 @@ slide-out {
 }
 .filtered-icon-cleaning{
     height:80px;
-    margin-top:4m;
+    margin-top:4;
 
 }
 
@@ -104,10 +120,7 @@ text-align: left;
 
 }
 
-h3 {
-    text-align: left;
 
-}
 h2 {
     text-align: center;
     margin: 0;
@@ -120,13 +133,27 @@ h2 {
 }
 .navbar-img{
     width: 3em;
-    height: 3em;
+}
+
+
+#toast-container {
+    min-width: 10%;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%) translateY(50%);
 }
 
 
 @media only screen and (max-width: 600px) {
     .icon-container img{
-        height: 8em;
+        height: 7em;
+    }
+    .background{
+        height: 100vh;
+    }
+    #nearby-store{
+    top: 1.5em;
+    font-size: 14px;
     }
   }
 
